@@ -1,6 +1,6 @@
 [build]
   publish = "eventpr/staticfiles"
-  command = "python eventpr/manage.py collectstatic --noinput && python build_static.py"
+  command = "chmod +x build.sh && ./build.sh"
 
 [build.environment]
   PYTHON_VERSION = "3.9"
