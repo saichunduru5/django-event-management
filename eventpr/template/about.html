@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About | Event Management
+{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 30px;">
+    <div class="panel panel-default" style="border-color: #d63384;">
+        <div class="panel-heading" style="background-color: #d63384; color: white;">
+            <h2 class="text-center">About Our Event Management System</h2>
+        </div>
+        <div class="panel-body" style="background-color: #f9f9f9; padding: 25px;">
+            <p style="font-size: 16px; color: #333;">
+                Our <strong>Event Management System</strong> is a powerful and intuitive platform designed to streamline every aspect of event planning and participation. 
+                Whether you're organizing college festivals, corporate conferences, weddings, or community meetups, our system is built to simplify your experience.
+            </p>
+
+            <h4 style="color: #d63384;"><i class="fas fa-star"></i> Key Features</h4>
+            <ul style="font-size: 15px; line-height: 1.8;">
+                <li><strong>🎉 Event Listings:</strong> Discover and explore all upcoming events.</li>
+                <li><strong>👥 User Registration:</strong> Secure signup and login for participants and organizers.</li>
+                <li><strong>🗓️ Online Booking:</strong> Effortlessly book tickets or reserve spots.</li>
+                <li><strong>📊 Admin Dashboard:</strong> Manage users, events, and bookings from one place.</li>
+                <li><strong>📱 Responsive Design:</strong> Fully optimized for mobile, tablet, and desktop.</li>
+            </ul>
+
+            <p style="font-size: 16px; color: #555; margin-top: 20px;">
+                Our mission is to bring innovation, simplicity, and efficiency to the world of event management. 
+                We empower organizers to run seamless events and help attendees enjoy stress-free participation.
+            </p>
+
+            <p style="font-size: 16px; color: #555;">
+                Got questions or suggestions? Feel free to <a href="{% url 'contact' %}" style="color: #d63384;"><strong>contact us</strong></a> anytime.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

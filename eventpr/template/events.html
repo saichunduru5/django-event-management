@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Events
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center" style="margin-top: 20px; color: #b30059;">Events</h2>
+
+<div class="container text-center">
+
+    {% for i in eve %}
+    <div class="card text-center" style="width: 20rem; display:inline-block; margin: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <img src="{{ i.img.url }}" class="card-img-top" alt="Event Image" height="150px" width="100%" style="object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+        <div class="card-body" style="padding: 15px;">
+            <h4 class="card-title" style="color: #333;">{{ i.name }}</h4>
+            <p class="card-text" style="color: #555;">{{ i.desc }}</p>
+
+            <p style="font-weight: bold; color: green;">Price: ₹{{ i.price }}</p>
+            <p style="color: #cc0066;">Combo Offer: Book 2 get 1 Free</p>
+
+            <a href="{% url 'booking' %}" class="btn btn-success">Book Now</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
+
+{% comment %}
+<!-- This block was previously causing the error -->
+<div class="card text-center" style="width: 18rem; display:inline-block; margin: 20px;">
+    <img src="{% static 'images/page2.jpg' %}" class="card-img-top" alt="Event Image" height="150px" width="200px">
+    <div class="card-body">
+        <h5 class="card-title">Event2</h5>
+        <p class="card-text">Best Option for your Events...!! Join us...</p>
+    </div>
+</div>
+{% endcomment %}
+
+
+
+ {% comment %}
+<div class="card text-center" style="width: 18rem; display:inline-block; margin: 20px;">
+    <img src="{% static 'images/page3.jpg' %}" class="card-img-top" alt="Event Image" height="150px" width="200px">
+    <div class="card-body">
+        <h5 class="card-title">Event3</h5>
+        <p class="card-text">Best Option for your Events...!! Join us...</p>
+    </div>
+</div>
+{% endcomment %}
+
